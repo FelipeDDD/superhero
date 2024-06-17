@@ -1,0 +1,14 @@
+#catButton {
+    font-size: 40px;
+}
+
+body {
+   
+   
+    gap: 50px;
+    max-width: 800px;
+}
+#imgHero {
+    display: none;
+    background-color: gray;
+}
