@@ -19,8 +19,8 @@ const imgHero = document.getElementById("imgHero");
 const searchButton = document.getElementById("searchButton");
 const searchInput = document.getElementById("searchInput");
 const heroName = document.getElementById("heroName");
-const str = document.getElementById("strenghtDiv");
-const speed = document.getElementById("speedDiv");
+// const str = document.getElementById("strenghtDiv");
+// const speed = document.getElementById("speedDiv");
 
 const BASE_URL = `https://superheroapi.com/api.php/8349c73eccc2c3fc6b1dc8a40ee79359/`;
 
@@ -28,7 +28,6 @@ const randomSuperHero = (id) => {
   // savedHero.style.display= "block";
   // savedHero.style.width = "500px";
   // savedHero.style.height = "500px";
-
   fetch(`${BASE_URL}/${id}`)
     .then((response) => response.json())
     .then((json) => {
@@ -46,16 +45,14 @@ const showHeroInfo = (character) => {
   const img = `<img src="${character.image.url}" height=500 width=500/>`;
   const pau = `<p>🍆 BELUGA: ${Math.floor(Math.random() * 20 + 1)}CM</p>`;
 
-  const stats = Object.keys(character.powerstats)
-    .map((stat) => {
-      return `<p>${statToEmoji[stat]} ${stat.toUpperCase()}: ${
-        character.powerstats[stat]
-      }</p>`;
-    })
-    .join("");
+  const stats = Object.keys(character.powerstats).map((stat) => {
+
+      return `<p>${statToEmoji[stat]} ${stat.toUpperCase()}: ${character.powerstats[stat]}</p>`
+    }).join("");
 
   imgHero.innerHTML = `${name}${img}<h3>${stats}${pau}</h3>`;
 };
+
 const statToEmoji = {
   intelligence: "🧠",
   strength: "💪",
@@ -87,11 +84,7 @@ function randomNumber(min, max) {
   const roundedNumber = Math.floor(randomNumber);
   return roundedNumber;
 }
-// function randomNumber2 = () => {
-//     return Math.floor(Math.random() * 733)
-
 function functionSeparada() {
-  imgHero.style.display = "block";
   randomSuperHero(randomNumber(1, 733));
 }
 function searchHero() {
