@@ -36,7 +36,6 @@ const randomSuperHero = (id) => {
       // str.textContent = "Strength:" + "  " + json.powerstats.strength;
       const superHero = json;
       showHeroInfo(superHero);
-      console.log(typeof superHero, "teste1");
     });
 };
 
