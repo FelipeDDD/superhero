@@ -22,9 +22,6 @@ body {
     color: white;
     margin-top: 0;
 }
-#imgHero, img {
-  display: flex;
-}
 #imgHero p {
     margin-top: 0;
 }
