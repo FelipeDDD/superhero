@@ -6,7 +6,7 @@ body {
     max-width: 800px;
 }
 #imgHero {
-  display: hidden;
+  display: none;
 }
 #heroName, h2 {
     margin-bottom: 0;
