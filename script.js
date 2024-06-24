@@ -48,7 +48,6 @@ const showHeroInfo = (character) => {
 
       return `<p>${statToEmoji[stat]} ${stat.toUpperCase()}: ${character.powerstats[stat]}</p>`
     }).join("");
-
   imgHero.innerHTML = `${name}${img}<h3>${stats}${pau}</h3>`;
 };
 
@@ -85,6 +84,7 @@ function randomNumber(min, max) {
 }
 function functionSeparada() {
   randomSuperHero(randomNumber(1, 733));
+  imgHero.style.display = "block";
 }
 function searchHero() {
   const inputValue = searchInput.value;
